@@ -1,4 +1,4 @@
-#!/home/ubuntu/paperweaver/backend/venv/bin/python3.11
+#!/Users/iwasamasaya/dev/personal/papaerWaver/backend/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -13,8 +13,11 @@ from src.routes.paper import paper_bp
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
 
-# Enable CORS for all routes
-CORS(app)
+# Enable CORS for all routes and blueprints
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}})
+CORS(user_bp)
+CORS(auth_bp)
+CORS(paper_bp)
 
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(auth_bp, url_prefix='/api')
